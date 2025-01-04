@@ -7,27 +7,16 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
-
-    <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-
-    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Topbar Start -->
     <div class="container-fluid">
         <div class="row bg-secondary py-2 px-xl-5">
             <div class="col-lg-6 d-none d-lg-block">
@@ -35,19 +24,29 @@
             <div class="col-lg-6 text-center text-lg-right">
                 <div class="d-inline-flex align-items-center">
                     <a class="text-dark px-2" href="https://www.facebook.com">
-                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-facebook-f">
+                            <h1 class="visually-hidden">facebook</h1>
+                        </i>
                     </a>
                     <a class="text-dark px-2" href="https://www.x.com">
-                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-twitter">
+                            <h1 class="visually-hidden">x</h1>
+                        </i>
                     </a>
                     <a class="text-dark px-2" href="https://www.linkedin.com">
-                        <i class="fab fa-linkedin-in"></i>
+                        <i class="fab fa-linkedin-in">
+                            <h1 class="visually-hidden">linked</h1>
+                        </i>
                     </a>
                     <a class="text-dark px-2" href="https://www.instagram.com">
-                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-instagram">
+                            <h1 class="visually-hidden">ig</h1>
+                        </i>
                     </a>
                     <a class="text-dark pl-2" href="https://www.youtube.com">
-                        <i class="fab fa-youtube"></i>
+                        <i class="fab fa-youtube">
+                            <h1 class="visually-hidden">yt</h1>
+                        </i>
                     </a>
                 </div>
             </div>
@@ -61,7 +60,8 @@
             <div class="col-lg-6 col-6 text-left">
                 <form action="">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search for products">
+                        <label for="search" class="visually-hidden"> label</label>
+                        <input type="text" id="search" class="form-control" placeholder="Search for products">
                         <div class="input-group-append">
                             <span class="input-group-text bg-transparent text-primary">
                                 <i class="fa fa-search"></i>
@@ -78,34 +78,21 @@
             </div>
         </div>
     </div>
-    <!-- Topbar End -->
-
-
-    <!-- Navbar Start -->
     <div class="container-fluid">
         <div class="row border-top px-xl-5">
             <div class="col-lg-3 d-none d-lg-block">
                 <a class="btn shadow-none d-flex align-items-center justify-content-between bg-primary text-white w-100"
                     data-toggle="collapse" href="#navbar-vertical"
                     style="height: 65px; margin-top: -1px; padding: 0 30px;">
-                    <h6 class="m-0">Categories</h6>
+                    <h1 class="m-0" style="font-size: 1.5em;">Categories</h1>
                     <i class="fa fa-angle-down text-dark"></i>
                 </a>
                 <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 bg-light"
                     id="navbar-vertical" style="width: calc(100% - 30px); z-index: 1;">
                     <div class="navbar-nav w-100 overflow-hidden">
-                        <!-- <div class="nav-item dropdown">
-                            <a href="shop.html" class="nav-link" data-toggle="dropdown">Games <i
-                                    class="fa fa-angle-down float-right mt-1"></i></a>
-                            <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
-                                <a href="shop.html" class="dropdown-item">Best Sellers</a>
-                                <a href="" class="dropdown-item">Coming Soon</a>
-                            </div>
-                        </div> -->
                         <a href="shop.html" class="nav-item nav-link">Games</a>
                         <a href="shop.html" class="nav-item nav-link">DLC</a>
                         <a href="shop.html" class="nav-item nav-link">Free Games</a>
-
                     </div>
                 </nav>
             </div>
@@ -115,38 +102,27 @@
                         <h1 class="m-0 display-5 font-weight-semi-bold"><span
                                 class="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
                     </a>
-                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
                             <a href="index.html" class="nav-item nav-link">Home</a>
                             <a href="shop.html" class="nav-item nav-link">Games</a>
-                            <a href="contact.html" class="nav-item nav-link active">Contact</a>
+                            <a href="contact.html" class="nav-item nav-link active" style="color: #AD1201;">Contact</a>
                         </div>
                     </div>
                 </nav>
             </div>
         </div>
     </div>
-    <!-- Navbar End -->
-
-
-    <!-- Page Header Start -->
     <div class="container-fluid bg-secondary mb-5">
         <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
             <h1 class="font-weight-semi-bold text-uppercase mb-3">Contact Us</h1>
             <div class="d-inline-flex">
-                <p class="m-0"><a href="index.html">Home</a></p>
-                <p class="m-0 px-2">-</p>
-                <p class="m-0">Contact</p>
+                <p class="m-0"><a href="index.html" style="color: black;">Home</a></p>
+                <p class="m-0 px-2" style="color: black;">-</p>
+                <p class="m-0" style="color: #AD1201;">Contact</p>
             </div>
         </div>
     </div>
-    <!-- Page Header End -->
-
-
-    <!-- Contact Start -->
     <div class="container-fluid pt-5">
         <div class="text-center mb-4">
             <h2 class="section-title px-5"><span class="px-2">Contact For Any Queries</span></h2>
@@ -157,22 +133,26 @@
                     <div id="success"></div>
                     <form name="sentMessage" id="contactForm" novalidate="novalidate">
                         <div class="control-group">
-                            <input type="text" class="form-control" id="name" placeholder="Your Name"
+                            <label for="name" class="visually-hidden"> label</label>
+                            <input id="name" type="text" class="form-control" id="name" placeholder="Your Name"
                                 required="required" data-validation-required-message="Please enter your name" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <input type="email" class="form-control" id="email" placeholder="Your Email"
+                            <label for="email" class="visually-hidden"> label</label>
+                            <input id="email" type="email" class="form-control" id="email" placeholder="Your Email"
                                 required="required" data-validation-required-message="Please enter your email" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <input type="text" class="form-control" id="subject" placeholder="Subject"
+                            <label for="subject" class="visually-hidden"> label</label>
+                            <input id="subject" type="text" class="form-control" id="subject" placeholder="Subject"
                                 required="required" data-validation-required-message="Please enter a subject" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <textarea class="form-control" rows="6" id="message" placeholder="Message"
+                            <label for="message" class="visually-hidden"> label</label>
+                            <textarea id="message" class="form-control" rows="6" id="message" placeholder="Message"
                                 required="required"
                                 data-validation-required-message="Please enter your message"></textarea>
                             <p class="help-block text-danger"></p>
@@ -185,11 +165,11 @@
                 </div>
             </div>
             <div class="col-lg-5 mb-5">
-                <h5 class="font-weight-semi-bold mb-3">Get In Touch</h5>
+                <h2 class="font-weight-semi-bold mb-3">Get In Touch</h2>
                 <p>Justo sed diam ut sed amet duo amet lorem amet stet sea ipsum, sed duo amet et. Est elitr dolor elitr
                     erat sit sit. Dolor diam et erat clita ipsum justo sed.</p>
                 <div class="d-flex flex-column mb-3">
-                    <h5 class="font-weight-semi-bold mb-3">Store</h5>
+                    <h3 class="font-weight-semi-bold mb-3">Store</h3>
                     <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>123 Street, New York, USA</p>
                     <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>info@example.com</p>
                     <p class="mb-2"><i class="fa fa-phone-alt text-primary mr-3"></i>+012 345 67890</p>
@@ -197,10 +177,6 @@
             </div>
         </div>
     </div>
-    <!-- Contact End -->
-
-
-    <!-- Footer Start -->
     <div class="container-fluid bg-secondary text-dark mt-5 pt-5">
         <div class="row px-xl-5 pt-5">
             <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
@@ -216,7 +192,7 @@
             <div class="col-lg-8 col-md-12">
                 <div class="row">
                     <div class="col-md-4 mb-5">
-                        <h5 class="font-weight-bold text-dark mb-4">Quick Links</h5>
+                        <h1 class="font-weight-bold text-dark mb-4">Quick Links</h1>
                         <div class="d-flex flex-column justify-content-start">
                             <a class="text-dark mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
                             <a class="text-dark mb-2" href="shop.html"><i class="fa fa-angle-right mr-2"></i>Our
@@ -243,24 +219,15 @@
             </div>
         </div>
     </div>
-    <!-- Footer End -->
-
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
-
-    <!-- JavaScript Libraries -->
+    <a href="#" class="btn btn-primary back-to-top" style="color: white">
+        <h1 class="visually-hidden">up</h1><i class="fa fa-angle-double-up"></i>
+    </a>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Contact Javascript File -->
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
-
-    <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
 
