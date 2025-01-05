@@ -7,27 +7,16 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
-
-    <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-
-    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Topbar Start -->
     <div class="container-fluid">
         <div class="row bg-secondary py-2 px-xl-5">
             <div class="col-lg-6 d-none d-lg-block">
@@ -35,19 +24,29 @@
             <div class="col-lg-6 text-center text-lg-right">
                 <div class="d-inline-flex align-items-center">
                     <a class="text-dark px-2" href="https://www.facebook.com">
-                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-facebook-f">
+                            <h1 class="visually-hidden">facebook</h1>
+                        </i>
                     </a>
                     <a class="text-dark px-2" href="https://www.x.com">
-                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-twitter">
+                            <h1 class="visually-hidden">x</h1>
+                        </i>
                     </a>
                     <a class="text-dark px-2" href="https://www.linkedin.com">
-                        <i class="fab fa-linkedin-in"></i>
+                        <i class="fab fa-linkedin-in">
+                            <h1 class="visually-hidden">linked</h1>
+                        </i>
                     </a>
                     <a class="text-dark px-2" href="https://www.instagram.com">
-                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-instagram">
+                            <h1 class="visually-hidden">ig</h1>
+                        </i>
                     </a>
                     <a class="text-dark pl-2" href="https://www.youtube.com">
-                        <i class="fab fa-youtube"></i>
+                        <i class="fab fa-youtube">
+                            <h1 class="visually-hidden">yt</h1>
+                        </i>
                     </a>
                 </div>
             </div>
@@ -60,8 +59,8 @@
             </div>
             <div class="col-lg-6 col-6 text-left">
                 <form action="">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search for products">
+                    <div class="input-group"><label for="search" class="visually-hidden"> label</label>
+                        <input type="text" class="form-control" id="search" placeholder="Search for products">
                         <div class="input-group-append">
                             <span class="input-group-text bg-transparent text-primary">
                                 <i class="fa fa-search"></i>
@@ -82,30 +81,18 @@
             </div>
         </div>
     </div>
-    <!-- Topbar End -->
-
-
-    <!-- Navbar Start -->
     <div class="container-fluid">
         <div class="row border-top px-xl-5">
             <div class="col-lg-3 d-none d-lg-block">
                 <a class="btn shadow-none d-flex align-items-center justify-content-between bg-primary text-white w-100"
                     data-toggle="collapse" href="#navbar-vertical"
                     style="height: 65px; margin-top: -1px; padding: 0 30px;">
-                    <h6 class="m-0">Categories</h6>
+                    <h1 class="m-0" style="font-size: 1.5em;">Categories</h1>
                     <i class="fa fa-angle-down text-dark"></i>
                 </a>
                 <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 bg-light"
                     id="navbar-vertical" style="width: calc(100% - 30px); z-index: 1;">
                     <div class="navbar-nav w-100 overflow-hidden">
-                        <!-- <div class="nav-item dropdown">
-                            <a href="shop.html" class="nav-link" data-toggle="dropdown">Games <i
-                                    class="fa fa-angle-down float-right mt-1"></i></a>
-                            <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
-                                <a href="shop.html" class="dropdown-item">Best Sellers</a>
-                                <a href="" class="dropdown-item">Coming Soon</a>
-                            </div>
-                        </div> -->
                         <a href="shop.html" class="nav-item nav-link">Games</a>
                         <a href="shop.html" class="nav-item nav-link">DLC</a>
                         <a href="shop.html" class="nav-item nav-link">Free Games</a>
@@ -119,9 +106,7 @@
                         <h1 class="m-0 display-5 font-weight-semi-bold"><span
                                 class="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
                     </a>
-                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
                             <a href="index.html" class="nav-item nav-link">Home</a>
@@ -133,32 +118,24 @@
             </div>
         </div>
     </div>
-    <!-- Navbar End -->
-
-
-    <!-- Page Header Start -->
     <div class="container-fluid bg-secondary mb-5">
         <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
             <h1 class="font-weight-semi-bold text-uppercase mb-3">Shop Detail</h1>
             <div class="d-inline-flex">
-                <p class="m-0"><a href="index.html">Home</a></p>
-                <p class="m-0 px-2">-</p>
-                <p class="m-0">Shop Detail</p>
+                <p class="m-0" style="color: black;"><a href="index.html" style="color: #4D4D4D;">Home</a></p>
+                <p class="m-0 px-2" style="color: black;">-</p>
+                <p class="m-0" style="color: black;">Shop Detail</p>
             </div>
         </div>
     </div>
-    <!-- Page Header End -->
-
-
-    <!-- Shop Detail Start -->
     <div class="container-fluid py-5">
         <div class="row px-xl-5">
             <div class="col-lg-5 pb-5">
-                <img class="w-100 h-100" src="img/index1.jpeg" alt="Image">
+                <img class="w-100 h-100" src="img/index1.jpeg" alt="Image_ass">
             </div>
 
             <div class="col-lg-7 pb-5">
-                <h3 class="font-weight-semi-bold">Assassin's Creed 3</h3>
+                <h2 class="font-weight-semi-bold">Assassin's Creed 3</h2>
                 <h3 class="font-weight-semi-bold mb-4">$50.00</h3>
                 <p class="mb-4">Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita
                     ea. Sanc invidunt ipsum et, labore clita lorem magna lorem ut. Erat lorem duo dolor no sea nonumy.
@@ -167,14 +144,18 @@
                 <div class="d-flex align-items-center mb-4 pt-2">
                     <div class="input-group quantity mr-3" style="width: 130px;">
                         <div class="input-group-btn">
-                            <button class="btn btn-primary btn-minus">
-                                <i class="fa fa-minus"></i>
+                            <button class="btn btn-primary btn-minus" id="minus">
+                                <h1 class="visually-hidden">minus</h1>
+                                <i id="minus_icon" class="fa fa-minus"></i>
                             </button>
                         </div>
-                        <input type="text" class="form-control bg-secondary text-center" value="1">
+                        <input type="text" id="numberOfProducts" class="form-control bg-secondary text-center"
+                            value="1">
+                        <label for="numberOfProducts" class="visually-hidden"> label</label>
                         <div class="input-group-btn">
                             <button class="btn btn-primary btn-plus">
-                                <i class="fa fa-plus"></i>
+                                <h1 class="visually-hidden">plus</h1>
+                                <i id="plus" class="fa fa-plus"></i>
                             </button>
                         </div>
                     </div>
@@ -185,33 +166,29 @@
         <div class="row px-xl-5">
             <div class="col">
                 <div class="nav nav-tabs justify-content-center border-secondary mb-4">
-                    <a class="nav-item nav-link active" data-toggle="tab" href="#tab-pane-1">Description</a>
-                    <a class="nav-item nav-link" data-toggle="tab" href="#tab-pane-2">Information</a>
+                    <a class="nav-item nav-link active" data-toggle="tab" href="#tab-pane-1"
+                        style="color: black;">Description</a>
+                    <a class="nav-item nav-link" data-toggle="tab" href="#tab-pane-2"
+                        style="color: black;">Information</a>
                 </div>
                 <div class="tab-content">
                     <div class="tab-pane fade show active" id="tab-pane-1">
-                        <h4 class="mb-3">Product Description</h4>
+                        <h2 class="mb-3">Product Description</h2>
                         <p>Eos no lorem eirmod diam diam, eos elitr et gubergren diam sea. Consetetur vero aliquyam
                             invidunt duo dolores et duo sit. Vero diam ea vero et dolore rebum, dolor rebum eirmod
                             consetetur invidunt sed sed et, lorem duo et eos elitr, sadipscing kasd ipsum rebum diam.
-                            Dolore diam stet rebum sed tempor kasd eirmod. Takimata kasd ipsum accusam sadipscing, eos
-                            dolores sit no ut diam consetetur duo justo est, sit sanctus diam tempor aliquyam eirmod
-                            nonumy rebum dolor accusam, ipsum kasd eos consetetur at sit rebum, diam kasd invidunt
-                            tempor lorem, ipsum lorem elitr sanctus eirmod takimata dolor ea invidunt.</p>
+                        </p>
                         <p>Dolore magna est eirmod sanctus dolor, amet diam et eirmod et ipsum. Amet dolore tempor
                             consetetur sed lorem dolor sit lorem tempor. Gubergren amet amet labore sadipscing clita
                             clita diam clita. Sea amet et sed ipsum lorem elitr et, amet et labore voluptua sit rebum.
                             Ea erat sed et diam takimata sed justo. Magna takimata justo et amet magna et.</p>
                     </div>
                     <div class="tab-pane fade" id="tab-pane-2">
-                        <h4 class="mb-3">Additional Information</h4>
+                        <h2 class="mb-3">Additional Information</h2>
                         <p>Eos no lorem eirmod diam diam, eos elitr et gubergren diam sea. Consetetur vero aliquyam
                             invidunt duo dolores et duo sit. Vero diam ea vero et dolore rebum, dolor rebum eirmod
                             consetetur invidunt sed sed et, lorem duo et eos elitr, sadipscing kasd ipsum rebum diam.
-                            Dolore diam stet rebum sed tempor kasd eirmod. Takimata kasd ipsum accusam sadipscing, eos
-                            dolores sit no ut diam consetetur duo justo est, sit sanctus diam tempor aliquyam eirmod
-                            nonumy rebum dolor accusam, ipsum kasd eos consetetur at sit rebum, diam kasd invidunt
-                            tempor lorem, ipsum lorem elitr sanctus eirmod takimata dolor ea invidunt.</p>
+                        </p>
                         <div class="row">
                             <div class="col-md-6">
                                 <ul class="list-group list-group-flush">
@@ -251,10 +228,6 @@
             </div>
         </div>
     </div>
-    <!-- Shop Detail End -->
-
-
-    <!-- Products Start -->
     <div class="container-fluid py-5">
         <div class="text-center mb-4">
             <h2 class="section-title px-5"><span class="px-2">You May Also Like</span></h2>
@@ -268,10 +241,10 @@
                             <img class="img-fluid w-100" src="img/index1.jpeg" alt="">
                         </div>
                         <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                            <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
+                            <h1 class="text-truncate mb-3" style="font-size: 1.17em;">Colorful Stylish Shirt</h1>
                             <div class="d-flex justify-content-center">
-                                <h6>$10.00</h6>
-                                <h6 class="text-muted ml-2"><del>$30.00</del></h6>
+                                <h1 style="font-size: 1em;">$10.00</h1>
+                                <h1 class="text-muted ml-2" style="font-size: 1em;"><del>$30.00</del></h1>
                             </div>
                         </div>
                         <div class="card-footer d-flex justify-content-between bg-light border">
@@ -288,10 +261,10 @@
                             <img class="img-fluid w-100" src="img/index1.jpeg" alt="">
                         </div>
                         <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                            <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
+                            <h1 class="text-truncate mb-3" style="font-size: 1.17em;">Colorful Stylish Shirt</h1>
                             <div class="d-flex justify-content-center">
-                                <h6>$23.00</h6>
-                                <h6 class="text-muted ml-2"><del>$123.00</del></h6>
+                                <h1 style="font-size: 1em;">$23.00</h1>
+                                <h1 class="text-muted ml-2" style="font-size: 1em;"><del>$123.00</del></h1>
                             </div>
                         </div>
                         <div class="card-footer d-flex justify-content-between bg-light border">
@@ -308,10 +281,10 @@
                             <img class="img-fluid w-100" src="img/index1.jpeg" alt="">
                         </div>
                         <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                            <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
+                            <h1 class="text-truncate mb-3" style="font-size: 1.17em;">Colorful Stylish Shirt</h1>
                             <div class="d-flex justify-content-center">
-                                <h6>$80.00</h6>
-                                <h6 class="text-muted ml-2"><del>$120.00</del></h6>
+                                <h1 style="font-size: 1em;">$80.00</h1>
+                                <h1 class="text-muted ml-2" style="font-size: 1em;"><del>$120.00</del></h1>
                             </div>
                         </div>
                         <div class="card-footer d-flex justify-content-between bg-light border">
@@ -328,10 +301,10 @@
                             <img class="img-fluid w-100" src="img/index1.jpeg" alt="">
                         </div>
                         <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                            <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
+                            <h1 class="text-truncate mb-3" style="font-size: 1.17em;">Colorful Stylish Shirt</h1>
                             <div class="d-flex justify-content-center">
-                                <h6>$35.00</h6>
-                                <h6 class="text-muted ml-2"><del>$40.00</del></h6>
+                                <h1 style="font-size: 1em;">$35.00</h1>
+                                <h1 class="text-muted ml-2" style="font-size: 1em;"><del>$40.00</del></h1>
                             </div>
                         </div>
                         <div class="card-footer d-flex justify-content-between bg-light border">
@@ -348,10 +321,10 @@
                             <img class="img-fluid w-100" src="img/index1.jpeg" alt="">
                         </div>
                         <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                            <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
+                            <h1 class="text-truncate mb-3" style="font-size: 1.17em;">Colorful Stylish Shirt</h1>
                             <div class="d-flex justify-content-center">
-                                <h6>$40.00</h6>
-                                <h6 class="text-muted ml-2"><del>$50.00</del></h6>
+                                <h1 style="font-size: 1em;">$40.00</h1>
+                                <h1 class="text-muted ml-2" style="font-size: 1em;"><del>$50.00</del></h1>
                             </div>
                         </div>
                         <div class="card-footer d-flex justify-content-between bg-light border">
@@ -366,10 +339,6 @@
             </div>
         </div>
     </div>
-    <!-- Products End -->
-
-
-    <!-- Footer Start -->
     <div class="container-fluid bg-secondary text-dark mt-5 pt-5">
         <div class="row px-xl-5 pt-5">
             <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
@@ -385,7 +354,7 @@
             <div class="col-lg-8 col-md-12">
                 <div class="row">
                     <div class="col-md-4 mb-5">
-                        <h5 class="font-weight-bold text-dark mb-4">Quick Links</h5>
+                        <h1 class="font-weight-bold text-dark mb-4">Quick Links</h1>
                         <div class="d-flex flex-column justify-content-start">
                             <a class="text-dark mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
                             <a class="text-dark mb-2" href="shop.html"><i class="fa fa-angle-right mr-2"></i>Our
@@ -412,24 +381,15 @@
             </div>
         </div>
     </div>
-    <!-- Footer End -->
-
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
-
-    <!-- JavaScript Libraries -->
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i>
+        <h1 class="visually-hidden">up</h1>
+    </a>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Contact Javascript File -->
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
-
-    <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
 

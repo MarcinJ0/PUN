@@ -7,27 +7,16 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
-
-    <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-
-    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Topbar Start -->
     <div class="container-fluid">
         <div class="row bg-secondary py-2 px-xl-5">
             <div class="col-lg-6 d-none d-lg-block">
@@ -36,19 +25,29 @@
             <div class="col-lg-6 text-center text-lg-right">
                 <div class="d-inline-flex align-items-center">
                     <a class="text-dark px-2" href="https://www.facebook.com">
-                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-facebook-f">
+                            <h1 class="visually-hidden">facebook</h1>
+                        </i>
                     </a>
                     <a class="text-dark px-2" href="https://www.x.com">
-                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-twitter">
+                            <h1 class="visually-hidden">x</h1>
+                        </i>
                     </a>
                     <a class="text-dark px-2" href="https://www.linkedin.com">
-                        <i class="fab fa-linkedin-in"></i>
+                        <i class="fab fa-linkedin-in">
+                            <h1 class="visually-hidden">linked</h1>
+                        </i>
                     </a>
                     <a class="text-dark px-2" href="https://www.instagram.com">
-                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-instagram">
+                            <h1 class="visually-hidden">ig</h1>
+                        </i>
                     </a>
                     <a class="text-dark pl-2" href="https://www.youtube.com">
-                        <i class="fab fa-youtube"></i>
+                        <i class="fab fa-youtube">
+                            <h1 class="visually-hidden">yt</h1>
+                        </i>
                     </a>
                 </div>
             </div>
@@ -62,7 +61,8 @@
             <div class="col-lg-6 col-6 text-left">
                 <form action="">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search for products">
+                        <label for="search" class="visually-hidden"> label</label>
+                        <input type="text" id="search" class="form-control" placeholder="Search for products">
                         <div class="input-group-append">
                             <span class="input-group-text bg-transparent text-primary">
                                 <i class="fa fa-search"></i>
@@ -72,10 +72,6 @@
                 </form>
             </div>
             <div class="col-lg-3 col-6 text-right">
-                <!-- <a href="" class="btn border">
-                    <i class="fas fa-heart text-primary"></i>
-                    <span class="badge">0</span>
-                </a> -->
                 <a href="cart.html" class="btn border">
                     <i class="fas fa-shopping-cart text-primary"></i>
                     <span class="badge">0</span>
@@ -83,30 +79,18 @@
             </div>
         </div>
     </div>
-    <!-- Topbar End -->
-
-
-    <!-- Navbar Start -->
     <div class="container-fluid mb-5">
         <div class="row border-top px-xl-5">
             <div class="col-lg-3 d-none d-lg-block">
                 <a class="btn shadow-none d-flex align-items-center justify-content-between bg-primary text-white w-100"
                     data-toggle="collapse" href="#navbar-vertical"
                     style="height: 65px; margin-top: -1px; padding: 0 30px;">
-                    <h6 class="m-0">Categories</h6>
+                    <h1 class="m-0" style="font-size: 1.5em;">Categories</h1>
                     <i class="fa fa-angle-down text-dark"></i>
                 </a>
                 <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 bg-light"
                     id="navbar-vertical" style="width: calc(100% - 30px); z-index: 1;">
                     <div class="navbar-nav w-100 overflow-hidden">
-                        <!-- <div class="nav-item dropdown">
-                            <a href="shop.html" class="nav-link" data-toggle="dropdown">Games <i
-                                    class="fa fa-angle-down float-right mt-1"></i></a>
-                            <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
-                                <a href="shop.html" class="dropdown-item">Best Sellers</a>
-                                <a href="" class="dropdown-item">Coming Soon</a>
-                            </div>
-                        </div> -->
                         <a href="shop.html" class="nav-item nav-link">Games</a>
                         <a href="shop.html" class="nav-item nav-link">DLC</a>
                         <a href="shop.html" class="nav-item nav-link">Free Games</a>
@@ -120,24 +104,21 @@
                         <h1 class="m-0 display-5 font-weight-semi-bold"><span
                                 class="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
                     </a>
-                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
                 </nav>
                 <div id="header-carousel" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active" style="height: 410px;">
-                            <img class="img-fluid" src="img/karuzela1.jpg" alt="Image">
+                            <img class="img-fluid" src="img/karuzela1.jpg" alt="Image1">
                             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                                 <div class="p-3" style="max-width: 700px;">
-                                    <h4 class="text-light text-uppercase font-weight-medium mb-3">10% Off Your First
-                                        Order</h4>
-                                    <h3 class="display-4 text-white font-weight-semi-bold mb-4">Newest productions</h3>
+                                    <h1 class="text-light text-uppercase font-weight-medium mb-3">10% Off Your First
+                                        Order</h1>
+                                    <h2 class="display-4 text-white font-weight-semi-bold mb-4">Newest productions</h2>
                                 </div>
                             </div>
                         </div>
                         <div class="carousel-item" style="height: 410px;">
-                            <img class="img-fluid" src="img/karuzela2.jpg" alt="Image">
+                            <img class="img-fluid" src="img/karuzela2.jpg" alt="Image2">
                             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                                 <div class="p-3" style="max-width: 700px;">
                                     <h3 class="display-4 text-white font-weight-semi-bold mb-4">Reasonable Price</h3>
@@ -149,62 +130,61 @@
                         <div class="btn btn-dark" style="width: 45px; height: 45px;">
                             <span class="carousel-control-prev-icon mb-n2"></span>
                         </div>
+                        <h1 class="visually-hidden">left</h1>
                     </a>
                     <a class="carousel-control-next" href="#header-carousel" data-slide="next">
                         <div class="btn btn-dark" style="width: 45px; height: 45px;">
                             <span class="carousel-control-next-icon mb-n2"></span>
                         </div>
+                        <h1 class="visually-hidden">right</h1>
                     </a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Navbar End -->
-
-    <!-- Categories Start -->
     <div class="container-fluid pt-5">
         <div class="row px-xl-5 pb-3">
             <div class="col-lg-4 col-md-6 pb-1">
                 <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px; height: 500px;">
                     <a href="shop.html" class="cat-img position-relative overflow-hidden mb-3">
-                        <img class="img-fluid" src="img/index1.jpeg" alt="error" style="padding: 30px; height: 400px;">
+                        <img class="img-fluid" src="img/index1.jpeg" alt="img1err"
+                            style="padding: 30px; height: 400px;">
                     </a>
-                    <h5 class="font-weight-semi-bold m-0">Games</h5>
+                    <h1 class="font-weight-semi-bold m-0" style="font-size: 1.17em;">Games</h1>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 pb-1">
                 <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px; height: 500px;">
                     <a href="shop.html" class="cat-img position-relative overflow-hidden mb-3">
-                        <img class="img-fluid" src="img/index2.jpg" alt="error" style="padding: 30px; height: 400px;">
+                        <img class="img-fluid" src="img/index2.jpg" alt="img2err" style="padding: 30px; height: 400px;">
                     </a>
-                    <h5 class="font-weight-semi-bold m-0">DLC</h5>
+                    <h1 class="font-weight-semi-bold m-0" style="font-size: 1.17em;">DLC</h1>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 pb-1">
                 <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px; height: 500px;">
                     <a href="shop.html" class="cat-img position-relative overflow-hidden mb-3">
-                        <img class="img-fluid" src="img/index3.jpg" alt="error" style="padding: 30px; height: 400px;">
+                        <img class="img-fluid" src="img/index3.jpg" alt="img3err" style="padding: 30px; height: 400px;">
                     </a>
-                    <h5 class="font-weight-semi-bold m-0">Free Games</h5>
+                    <h1 class="font-weight-semi-bold m-0" style="font-size: 1.17em;">Free Games</h1>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Categories End -->
-
-
-    <!-- Subscribe Start -->
     <div class="container-fluid bg-secondary my-5">
         <div class="row justify-content-md-center py-5 px-xl-5">
             <div class="col-md-6 col-12 py-5">
                 <div class="text-center mb-2 pb-2">
                     <h2 class="section-title px-5 mb-3"><span class="bg-secondary px-2">Stay Updated</span></h2>
-                    <p>Amet lorem at rebum amet dolores. Elitr lorem dolor sed amet diam labore at justo ipsum eirmod
+                    <p style="color: black;">Amet lorem at rebum amet dolores. Elitr lorem dolor sed amet diam labore at
+                        justo ipsum eirmod
                         duo labore labore.</p>
                 </div>
                 <form action="">
                     <div class="input-group">
-                        <input type="text" class="form-control border-white p-4" placeholder="Email Goes Here">
+                        <label for="emailform" class="visually-hidden" style="color:black"> label</label>
+                        <input type="text" id="emailform" class="form-control border-white p-4"
+                            placeholder="Email Goes Here">
                         <div class="input-group-append">
                             <button class="btn btn-primary px-4">Subscribe</button>
                         </div>
@@ -213,9 +193,6 @@
             </div>
         </div>
     </div>
-    <!-- Subscribe End -->
-
-    <!-- Footer Start -->
     <div class="container-fluid bg-secondary text-dark mt-5 pt-5">
         <div class="row px-xl-5 pt-5">
             <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
@@ -231,7 +208,7 @@
             <div class="col-lg-8 col-md-12">
                 <div class="row">
                     <div class="col-md-4 mb-5">
-                        <h5 class="font-weight-bold text-dark mb-4">Quick Links</h5>
+                        <h1 class="font-weight-bold text-dark mb-4">Quick Links</h1>
                         <div class="d-flex flex-column justify-content-start">
                             <a class="text-dark mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
                             <a class="text-dark mb-2" href="shop.html"><i class="fa fa-angle-right mr-2"></i>Our
@@ -258,24 +235,15 @@
             </div>
         </div>
     </div>
-    <!-- Footer End -->
-
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
-
-    <!-- JavaScript Libraries -->
+    <a href="#" class="btn btn-primary back-to-top" style="color: white">
+        <h1 class="visually-hidden">up</h1><i class="fa fa-angle-double-up"></i>
+    </a>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Contact Javascript File -->
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
-
-    <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
 
