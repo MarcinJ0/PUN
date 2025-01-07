@@ -1,7 +1,5 @@
 (function ($) {
     "use strict";
-    
-    // Dropdown on mouse hover
     $(document).ready(function () {
         function toggleNavbarMethod() {
             if ($(window).width() > 992) {
@@ -17,9 +15,7 @@
         toggleNavbarMethod();
         $(window).resize(toggleNavbarMethod);
     });
-    
-    
-    // Back to top button
+
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
             $('.back-to-top').fadeIn('slow');
@@ -32,8 +28,6 @@
         return false;
     });
 
-
-    // Vendor carousel
     $('.vendor-carousel').owlCarousel({
         loop: true,
         margin: 29,
@@ -59,8 +53,6 @@
         }
     });
 
-
-    // Related carousel
     $('.related-carousel').owlCarousel({
         loop: true,
         margin: 29,
@@ -83,8 +75,6 @@
         }
     });
 
-
-    // Product Quantity
     $('.quantity button').on('click', function () {
         var button = $(this);
         var oldValue = button.parent().parent().find('input').val();

@@ -1,4 +1,3 @@
-// shop.js
 import { games } from "./games.js"
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -6,20 +5,16 @@ document.addEventListener("DOMContentLoaded", function () {
 	const priceFilterForm = document.getElementById("price-filter")
 	const typeFilterForm = document.getElementById("type-filter")
 
-	// Wyświetl wszystkie gry na starcie
 	displayGames(games)
 
-	// Obsługa filtrowania po cenie
 	priceFilterForm.addEventListener("change", function () {
 		filterGames()
 	})
 
-	// Obsługa filtrowania po typie
 	typeFilterForm.addEventListener("change", function () {
 		filterGames()
 	})
 
-	// Funkcja do filtrowania gier
 	function filterGames() {
 		const selectedPrices = getSelectedValues(priceFilterForm, "price")
 		const selectedTypes = getSelectedValues(typeFilterForm, "type")
@@ -40,17 +35,14 @@ document.addEventListener("DOMContentLoaded", function () {
 		displayGames(filteredGames)
 	}
 
-	// Funkcja do pobierania wybranych wartości z formularza
 	function getSelectedValues(form, name) {
 		return Array.from(form.elements[name])
 			.filter((input) => input.checked)
 			.map((input) => input.value)
 	}
 
-	// Funkcja do wyświetlania gier
 	function displayGames(gamesToDisplay) {
-		gamesContainer.innerHTML = "" // Wyczyść kontener
-
+		gamesContainer.innerHTML = ""
 		gamesToDisplay.forEach((game) => {
 			const gameCard = `
                 <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
@@ -90,7 +82,6 @@ document.addEventListener("DOMContentLoaded", function () {
 			gamesContainer.insertAdjacentHTML("beforeend", gameCard)
 		})
 
-		// Obsługa dodawania do koszyka
 		document.querySelectorAll(".add-to-cart").forEach((button) => {
 			button.addEventListener("click", function (e) {
 				e.preventDefault()
@@ -100,7 +91,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		})
 	}
 
-	// Funkcja do dodawania do koszyka
 	function addToCart(gameId) {
 		const game = games.find((g) => g.id == gameId)
 		if (game) {
@@ -119,7 +109,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	}
 
-	// Funkcja do aktualizacji liczby produktów w koszyku
 	function updateCartCount() {
 		const cart = JSON.parse(localStorage.getItem("cart")) || []
 		const cartCount = document.querySelector(".badge")

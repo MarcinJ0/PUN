@@ -1,4 +1,3 @@
-// cart.js
 import { games } from "./games.js"
 document.addEventListener("DOMContentLoaded", function () {
 	const cart = JSON.parse(localStorage.getItem("cart")) || []
@@ -91,18 +90,17 @@ function updateQuantity(gameId, change, setExact = false) {
 
 	if (game) {
 		if (setExact) {
-			game.quantity = change // Ustaw dokładną ilość
+			game.quantity = change 
 		} else {
-			game.quantity += change // Zwiększ lub zmniejsz ilość
+			game.quantity += change 
 		}
 
 		if (game.quantity <= 0) {
-			// Jeśli ilość spadnie do 0, usuń produkt z koszyka
 			cart = cart.filter((g) => g.id != gameId)
 		}
 
 		localStorage.setItem("cart", JSON.stringify(cart))
-		location.reload() // Odśwież stronę, aby zaktualizować koszyk
+		location.reload()
 	}
 }
 
@@ -110,5 +108,5 @@ function removeFromCart(gameId) {
 	let cart = JSON.parse(localStorage.getItem("cart")) || []
 	cart = cart.filter((g) => g.id != gameId)
 	localStorage.setItem("cart", JSON.stringify(cart))
-	location.reload() // Odśwież stronę, aby zaktualizować koszyk
+	location.reload()
 }

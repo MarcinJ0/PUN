@@ -1,4 +1,3 @@
-// games.js
 export const games = [
 	{
 		id: 1,

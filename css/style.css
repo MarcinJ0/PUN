@@ -79,7 +79,7 @@ html {
 	min-width: 100px;
 }
 
-/* Styl dla wyboru języka */
+
 .language-selector {
 	font-size: 1.2em;
 	font-weight: bold;
@@ -89,7 +89,7 @@ html {
 	font-size: 1.2em;
 	font-weight: bold;
 }
-/* style.css */
+
 .card img {
 	height: 300px;
 	object-fit: cover;

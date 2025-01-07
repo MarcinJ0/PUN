@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		document.getElementById("game-description").textContent = game.description
 		document.getElementById("game-details").textContent = game.details
 
-		// Sprawdź, czy to DLC i wyświetl link do podstawowej wersji gry
 		if (game.baseGameId) {
 			const baseGame = games.find((g) => g.id == game.baseGameId)
 			if (baseGame) {
@@ -28,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	}
 
-	// Obsługa dodawania do koszyka
 	document.getElementById("add-to-cart").addEventListener("click", function () {
 		const quantity = parseInt(document.getElementById("quantity").value)
 		addToCart(gameId, quantity)
