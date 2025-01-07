@@ -1,56 +1,114 @@
 // cart.js
-function addToCart(productId) {
-	let cart = JSON.parse(localStorage.getItem("cart")) || []
-	const product = products.find((p) => p.id == productId)
-	if (product) {
-		cart.push(product)
-		localStorage.setItem("cart", JSON.stringify(cart))
-		alert("Product added to cart!")
-	}
-}
+import { games } from "./games.js"
+document.addEventListener("DOMContentLoaded", function () {
+	const cart = JSON.parse(localStorage.getItem("cart")) || []
+	const cartItemsContainer = document.getElementById("cart-items")
+	const subtotalElement = document.getElementById("subtotal")
+	const totalElement = document.getElementById("total")
 
-function removeFromCart(index) {
-	let cart = JSON.parse(localStorage.getItem("cart")) || []
-	cart.splice(index, 1)
-	localStorage.setItem("cart", JSON.stringify(cart))
-	alert("Product removed from cart!")
-	location.reload() // Refresh the page to update the cart
-}
+	let subtotal = 0
 
-function displayCartItems() {
-	const cartItems = document.getElementById("cart-items")
-	let cart = JSON.parse(localStorage.getItem("cart")) || []
+	cart.forEach((game) => {
+		const totalPrice = game.price * game.quantity
+		subtotal += totalPrice
 
-	cartItems.innerHTML = "" // Clear existing items
-
-	cart.forEach((product, index) => {
-		const cartItemHTML = `
+		const cartItem = `
             <tr>
-                <td class="align-middle"><img src="${product.image}" alt="${product.name}" style="width: 50px;"> ${product.name}</td>
-                <td class="align-middle">$${product.price}</td>
+                <td class="align-middle"><img src="${
+									game.image
+								}" alt="" style="width: 50px;"> ${game.name}</td>
+                <td class="align-middle">$${game.price.toFixed(2)}</td>
                 <td class="align-middle">
                     <div class="input-group quantity mx-auto" style="width: 100px;">
                         <div class="input-group-btn">
-                            <button class="btn btn-sm btn-primary btn-minus"><i class="fa fa-minus"></i></button>
+                            <button class="btn btn-sm btn-primary btn-minus" data-id="${
+															game.id
+														}">-</button>
                         </div>
-                        <input type="text" class="form-control form-control-sm bg-secondary text-center" value="1">
+                        <label for="cart_quantity" class="visually-hidden">Quantity</label>
+                        <input type="text" id="cart_quantity" class="form-control form-control-sm bg-secondary text-center quantity-input" value="${
+													game.quantity
+												}" data-id="${game.id}">
                         <div class="input-group-btn">
-                            <button class="btn btn-sm btn-primary btn-plus"><i class="fa fa-plus"></i></button>
+                            <button class="btn btn-sm btn-primary btn-plus" data-id="${
+															game.id
+														}">+</button>
                         </div>
                     </div>
                 </td>
-                <td class="align-middle">$${product.price}</td>
-                <td class="align-middle"><button class="btn btn-sm btn-primary remove-from-cart" data-index="${index}"><i class="fa fa-times"></i></button></td>
+                <td class="align-middle">$${totalPrice.toFixed(2)}</td>
+                <td class="align-middle">
+                    <button class="btn btn-sm btn-primary remove-from-cart" data-id="${
+											game.id
+										}">x</button>
+                </td>
             </tr>
         `
-		cartItems.insertAdjacentHTML("beforeend", cartItemHTML)
+		cartItemsContainer.insertAdjacentHTML("beforeend", cartItem)
 	})
 
-	// Add event listeners for remove buttons
-	document.querySelectorAll(".remove-from-cart").forEach((button) => {
+	subtotalElement.textContent = `$${subtotal.toFixed(2)}`
+	totalElement.textContent = `$${subtotal.toFixed(2)}`
+
+	// Obsługa zmiany ilości
+	document.querySelectorAll(".btn-minus").forEach((button) => {
 		button.addEventListener("click", function () {
-			const index = this.getAttribute("data-index")
-			removeFromCart(index)
+			const gameId = this.getAttribute("data-id")
+			updateQuantity(gameId, -1)
 		})
 	})
+
+	document.querySelectorAll(".btn-plus").forEach((button) => {
+		button.addEventListener("click", function () {
+			const gameId = this.getAttribute("data-id")
+			updateQuantity(gameId, 1)
+		})
+	})
+
+	// Obsługa ręcznej zmiany ilości
+	document.querySelectorAll(".quantity-input").forEach((input) => {
+		input.addEventListener("change", function () {
+			const gameId = this.getAttribute("data-id")
+			const newQuantity = parseInt(this.value)
+			if (newQuantity > 0) {
+				updateQuantity(gameId, newQuantity, true)
+			}
+		})
+	})
+
+	// Obsługa usuwania z koszyka
+	document.querySelectorAll(".remove-from-cart").forEach((button) => {
+		button.addEventListener("click", function () {
+			const gameId = this.getAttribute("data-id")
+			removeFromCart(gameId)
+		})
+	})
+})
+
+function updateQuantity(gameId, change, setExact = false) {
+	let cart = JSON.parse(localStorage.getItem("cart")) || []
+	const game = cart.find((g) => g.id == gameId)
+
+	if (game) {
+		if (setExact) {
+			game.quantity = change // Ustaw dokładną ilość
+		} else {
+			game.quantity += change // Zwiększ lub zmniejsz ilość
+		}
+
+		if (game.quantity <= 0) {
+			// Jeśli ilość spadnie do 0, usuń produkt z koszyka
+			cart = cart.filter((g) => g.id != gameId)
+		}
+
+		localStorage.setItem("cart", JSON.stringify(cart))
+		location.reload() // Odśwież stronę, aby zaktualizować koszyk
+	}
+}
+
+function removeFromCart(gameId) {
+	let cart = JSON.parse(localStorage.getItem("cart")) || []
+	cart = cart.filter((g) => g.id != gameId)
+	localStorage.setItem("cart", JSON.stringify(cart))
+	location.reload() // Odśwież stronę, aby zaktualizować koszyk
 }

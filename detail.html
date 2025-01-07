@@ -20,7 +20,9 @@
     <div class="container-fluid">
         <div class="row bg-secondary py-2 px-xl-5 align-items-center">
             <div class="col-lg-12 d-flex justify-content-between align-items-center">
-                <div><h1 class="visually-hidden">column</h1></div>
+                <div>
+                    <h1 class="visually-hidden">column</h1>
+                </div>
                 <div class="d-inline-flex align-items-center">
                     <a class="text-dark px-2" href="https://www.facebook.com">
                         <i class="fab fa-facebook-f">
@@ -126,39 +128,42 @@
     <div class="container-fluid py-5">
         <div class="row px-xl-5">
             <div class="col-lg-5 pb-5">
-                <img class="w-100 h-100" src="img/index5.avif" alt="Image_ass">
+                <img class="w-100 h-100" src="" alt="Game Image 1" id="game-image">
             </div>
-
             <div class="col-lg-7 pb-5">
                 <div class="d-flex align-items-center mb-3">
-                    <h2 class="font-weight-semi-bold">The Wither 3: Blood & Wine</h2>
-                    <a href="base-version.html" class="text-decoration-none text-dark ml-3" style="font-size: 1em; text-decoration: underline !important;">View Base Game Version</a>
+                    <h2 class="font-weight-semi-bold" id="game-name"></h2>
+                    <!-- Dodaj napis "View base game version" dla DLC -->
+                    <a href="#" id="base-game-url" class="text-decoration-none text-dark ml-3"
+                        style="font-size: 1em; text-decoration: underline !important;">View Base Game Version</a>
                 </div>
-                    <h3 class="font-weight-semi-bold mb-0">$50.00</h3>
-                <p class="mb-4">Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita
-                    ea. Sanc invidunt ipsum et, labore clita lorem magna lorem ut. Erat lorem duo dolor no sea nonumy.
-                    Accus labore stet, est lorem sit diam sea et justo, amet at lorem et eirmod ipsum diam et rebum kasd
-                    rebum.</p>
+
+                <h3 class="font-weight-semi-bold mb-0" id="game-price"></h3>
+                <p class="mb-4" id="game-description"></p>
                 <div class="d-flex align-items-center mb-4 pt-2">
                     <div class="input-group quantity mr-3" style="width: 130px;">
                         <div class="input-group-btn">
-                            <button class="btn btn-primary btn-minus" id="minus">
-                                <h1 class="visually-hidden">minus</h1>
-                                <i id="minus_icon" class="fa fa-minus"></i>
+                            <button class="btn btn-primary btn-minus">
+                                <i class="fa fa-minus">
+                                    <h1 class="visually-hidden">-</h1>
+                                </i>
                             </button>
                         </div>
-                        <input type="text" id="numberOfProducts" class="form-control bg-secondary text-center"
-                            value="1">
-                        <label for="numberOfProducts" class="visually-hidden"> label</label>
+                        <label for="quantity" class="visually-hidden">Quantity</label>
+                        <input type="text" class="form-control bg-secondary text-center" value="1" id="quantity">
                         <div class="input-group-btn">
                             <button class="btn btn-primary btn-plus">
-                                <h1 class="visually-hidden">plus</h1>
-                                <i id="plus" class="fa fa-plus"></i>
+                                <i class="fa fa-plus">
+                                    <h1 class="visually-hidden">+</h1>
+                                </i>
                             </button>
                         </div>
                     </div>
-                    <button class="btn btn-primary px-3"><i class="fa fa-shopping-cart mr-1"></i> Add To Cart</button>
+                    <button class="btn btn-primary px-3" id="add-to-cart">
+                        <i class="fa fa-shopping-cart mr-1"></i> Add To Cart
+                    </button>
                 </div>
+
             </div>
         </div>
         <div class="row px-xl-5">
@@ -172,55 +177,11 @@
                 <div class="tab-content">
                     <div class="tab-pane fade show active" id="tab-pane-1">
                         <h2 class="mb-3">Product Description</h2>
-                        <p>Eos no lorem eirmod diam diam, eos elitr et gubergren diam sea. Consetetur vero aliquyam
-                            invidunt duo dolores et duo sit. Vero diam ea vero et dolore rebum, dolor rebum eirmod
-                            consetetur invidunt sed sed et, lorem duo et eos elitr, sadipscing kasd ipsum rebum diam.
-                        </p>
-                        <p>Dolore magna est eirmod sanctus dolor, amet diam et eirmod et ipsum. Amet dolore tempor
-                            consetetur sed lorem dolor sit lorem tempor. Gubergren amet amet labore sadipscing clita
-                            clita diam clita. Sea amet et sed ipsum lorem elitr et, amet et labore voluptua sit rebum.
-                            Ea erat sed et diam takimata sed justo. Magna takimata justo et amet magna et.</p>
+                        <p id="game-details"></p>
                     </div>
                     <div class="tab-pane fade" id="tab-pane-2">
                         <h2 class="mb-3">Additional Information</h2>
-                        <p>Eos no lorem eirmod diam diam, eos elitr et gubergren diam sea. Consetetur vero aliquyam
-                            invidunt duo dolores et duo sit. Vero diam ea vero et dolore rebum, dolor rebum eirmod
-                            consetetur invidunt sed sed et, lorem duo et eos elitr, sadipscing kasd ipsum rebum diam.
-                        </p>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item px-0">
-                                        Sit erat duo lorem duo ea consetetur, et eirmod takimata.
-                                    </li>
-                                    <li class="list-group-item px-0">
-                                        Amet kasd gubergren sit sanctus et lorem eos sadipscing at.
-                                    </li>
-                                    <li class="list-group-item px-0">
-                                        Duo amet accusam eirmod nonumy stet et et stet eirmod.
-                                    </li>
-                                    <li class="list-group-item px-0">
-                                        Takimata ea clita labore amet ipsum erat justo voluptua. Nonumy.
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item px-0">
-                                        Sit erat duo lorem duo ea consetetur, et eirmod takimata.
-                                    </li>
-                                    <li class="list-group-item px-0">
-                                        Amet kasd gubergren sit sanctus et lorem eos sadipscing at.
-                                    </li>
-                                    <li class="list-group-item px-0">
-                                        Duo amet accusam eirmod nonumy stet et et stet eirmod.
-                                    </li>
-                                    <li class="list-group-item px-0">
-                                        Takimata ea clita labore amet ipsum erat justo voluptua. Nonumy.
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        <p>Additional information about the game...</p>
                     </div>
                 </div>
             </div>
@@ -241,16 +202,17 @@
                         <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
                             <h1 class="text-truncate mb-3" style="font-size: 1.17em;">Assassin's Creed 3</h1>
                             <div class="d-flex justify-content-center">
-                                <h1 style="font-size: 1em;">$10.00</h1>
+                                <h1 style="font-size: 1em;">$40.00</h1>
                                 <h1 class="text-muted ml-2" style="font-size: 1em;"><del>$30.00</del></h1>
                             </div>
                         </div>
                         <div class="card-footer d-flex justify-content-between bg-light border">
-                            <a href="detail.html" class="btn btn-sm text-dark p-0"><i
+                            <a href="detail.html?id=1" class="btn btn-sm text-dark p-0"><i
                                     class="fas fa-eye text-primary mr-1"></i>View
                                 Detail</a>
-                            <a href="" class="btn btn-sm text-dark p-0"><i
-                                    class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
+                            <a href="#" class="btn btn-sm text-dark p-0 add-to-cart-carousel" data-id="1">
+                                <i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart
+                            </a>
                         </div>
                     </div>
                     <div class="card product-item border-0">
@@ -261,16 +223,17 @@
                         <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
                             <h1 class="text-truncate mb-3" style="font-size: 1.17em;">The Wither 3</h1>
                             <div class="d-flex justify-content-center">
-                                <h1 style="font-size: 1em;">$23.00</h1>
+                                <h1 style="font-size: 1em;">$22.00</h1>
                                 <h1 class="text-muted ml-2" style="font-size: 1em;"><del>$123.00</del></h1>
                             </div>
                         </div>
                         <div class="card-footer d-flex justify-content-between bg-light border">
-                            <a href="detail.html" class="btn btn-sm text-dark p-0"><i
+                            <a href="detail.html?id=2" class="btn btn-sm text-dark p-0"><i
                                     class="fas fa-eye text-primary mr-1"></i>View
                                 Detail</a>
-                            <a href="" class="btn btn-sm text-dark p-0"><i
-                                    class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
+                            <a href="#" class="btn btn-sm text-dark p-0 add-to-cart-carousel" data-id="2">
+                                <i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart
+                            </a>
                         </div>
                     </div>
                     <div class="card product-item border-0">
@@ -281,16 +244,17 @@
                         <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
                             <h1 class="text-truncate mb-3" style="font-size: 1.17em;">Grand Theft Auto 5</h1>
                             <div class="d-flex justify-content-center">
-                                <h1 style="font-size: 1em;">$80.00</h1>
+                                <h1 style="font-size: 1em;">$41.00</h1>
                                 <h1 class="text-muted ml-2" style="font-size: 1em;"><del>$120.00</del></h1>
                             </div>
                         </div>
                         <div class="card-footer d-flex justify-content-between bg-light border">
-                            <a href="detail.html" class="btn btn-sm text-dark p-0"><i
+                            <a href="detail.html?id=3" class="btn btn-sm text-dark p-0"><i
                                     class="fas fa-eye text-primary mr-1"></i>View
                                 Detail</a>
-                            <a href="" class="btn btn-sm text-dark p-0"><i
-                                    class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
+                            <a href="#" class="btn btn-sm text-dark p-0 add-to-cart-carousel" data-id="3">
+                                <i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart
+                            </a>
                         </div>
                     </div>
                     <div class="card product-item border-0">
@@ -301,16 +265,17 @@
                         <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
                             <h1 class="text-truncate mb-3" style="font-size: 1.17em;">Forza Horizon 5</h1>
                             <div class="d-flex justify-content-center">
-                                <h1 style="font-size: 1em;">$35.00</h1>
-                                <h1 class="text-muted ml-2" style="font-size: 1em;"><del>$40.00</del></h1>
+                                <h1 style="font-size: 1em;">$50.00</h1>
+                                <h1 class="text-muted ml-2" style="font-size: 1em;"><del>$80.00</del></h1>
                             </div>
                         </div>
                         <div class="card-footer d-flex justify-content-between bg-light border">
-                            <a href="detail.html" class="btn btn-sm text-dark p-0"><i
+                            <a href="detail.html?id=5" class="btn btn-sm text-dark p-0"><i
                                     class="fas fa-eye text-primary mr-1"></i>View
                                 Detail</a>
-                            <a href="" class="btn btn-sm text-dark p-0"><i
-                                    class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
+                            <a href="#" class="btn btn-sm text-dark p-0 add-to-cart-carousel" data-id="5">
+                                <i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -346,7 +311,9 @@
                         <div class="d-inline-flex align-items-center">
                             <i class="fas fa-globe text-dark mr-2" style="font-size: 1.5em;"></i>
                             <div class="dropdown">
-                                <a class="text-dark dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 1.2em;">
+                                <a class="text-dark dropdown-toggle" href="#" id="languageDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                    style="font-size: 1.2em;">
                                     English
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="languageDropdown">
@@ -385,6 +352,8 @@
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
     <script src="js/main.js"></script>
+    <script type="module" src="./js/detail.js"></script>
+    <script type="module" src="./js/games.js"></script>
 </body>
 
 </html>

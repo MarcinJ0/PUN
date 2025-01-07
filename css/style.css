@@ -65,32 +65,44 @@ html {
 }
 
 .dropdown-toggle::after {
-    display: inline-block;
-    margin-left: 0.255em;
-    vertical-align: 0.255em;
-    content: "";
-    border-top: 0.3em solid;
-    border-right: 0.3em solid transparent;
-    border-bottom: 0;
-    border-left: 0.3em solid transparent;
+	display: inline-block;
+	margin-left: 0.255em;
+	vertical-align: 0.255em;
+	content: "";
+	border-top: 0.3em solid;
+	border-right: 0.3em solid transparent;
+	border-bottom: 0;
+	border-left: 0.3em solid transparent;
 }
 
 .dropdown-menu {
-    min-width: 100px;
+	min-width: 100px;
 }
 
 /* Styl dla wyboru języka */
 .language-selector {
-    font-size: 1.2em;
-    font-weight: bold;
+	font-size: 1.2em;
+	font-weight: bold;
 }
 
 .language-selector .dropdown-toggle {
-    font-size: 1.2em;
-    font-weight: bold;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+/* style.css */
+.card img {
+	height: 300px;
+	object-fit: cover;
 }
 
+.card-body span {
+	font-size: 1.25em;
+	font-weight: 600;
+}
 
+.card-footer a {
+	font-size: 0.9em;
+}
 
 article,
 aside,
@@ -609,8 +621,8 @@ mark,
 }
 
 .img-fluid2 {
-  max-width: 100%;
-  height: 280px;
+	max-width: 100%;
+	height: 280px;
 }
 
 .img-thumbnail {
@@ -4946,22 +4958,22 @@ input[type="button"].btn-block {
 }
 
 .page-link {
-  position: relative;
-  display: block;
-  padding: 0.5rem 0.75rem;
-  margin-left: -1px;
-  line-height: 1.25;
-  color: #b13d33;
-  background-color: #fff;
-  border: 1px solid #dee2e6;
+	position: relative;
+	display: block;
+	padding: 0.5rem 0.75rem;
+	margin-left: -1px;
+	line-height: 1.25;
+	color: #b13d33;
+	background-color: #fff;
+	border: 1px solid #dee2e6;
 }
 
 .page-link:hover {
-  z-index: 2;
-  color: #e62c1b;
-  text-decoration: none;
-  background-color: #e9ecef;
-  border-color: #dee2e6;
+	z-index: 2;
+	color: #e62c1b;
+	text-decoration: none;
+	background-color: #e9ecef;
+	border-color: #dee2e6;
 }
 
 .page-link:focus {
@@ -4975,10 +4987,10 @@ input[type="button"].btn-block {
 }
 
 .page-item.active .page-link {
-  z-index: 3;
-  color: #fff;
-  background-color: #c4463a;
-  border-color: #D19C97;
+	z-index: 3;
+	color: #fff;
+	background-color: #c4463a;
+	border-color: #d19c97;
 }
 
 .page-item.disabled .page-link {
