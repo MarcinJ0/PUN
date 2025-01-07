@@ -15,13 +15,11 @@ document.addEventListener("DOMContentLoaded", function () {
 		)}`
 		document.getElementById("game-description").textContent = game.description
 		document.getElementById("game-details").textContent = game.details
-
 		if (game.baseGameId) {
 			const baseGame = games.find((g) => g.id == game.baseGameId)
 			if (baseGame) {
-				const baseGameLink = document.getElementById("base-game-link")
 				const baseGameUrl = document.getElementById("base-game-url")
-				baseGameLink.style.display = "block"
+				baseGameUrl.style.display = "inline"
 				baseGameUrl.href = `detail.html?id=${baseGame.id}`
 			}
 		}
@@ -31,13 +29,13 @@ document.addEventListener("DOMContentLoaded", function () {
 		const quantity = parseInt(document.getElementById("quantity").value)
 		addToCart(gameId, quantity)
 	})
-})
 
-document.querySelectorAll(".add-to-cart-carousel").forEach((button) => {
-	button.addEventListener("click", function (e) {
-		e.preventDefault()
-		const gameId = this.getAttribute("data-id")
-		addToCart(gameId)
+	document.querySelectorAll(".add-to-cart-carousel").forEach((button) => {
+		button.addEventListener("click", function (e) {
+			e.preventDefault()
+			const gameId = this.getAttribute("data-id")
+			addToCart(gameId)
+		})
 	})
 })
 
